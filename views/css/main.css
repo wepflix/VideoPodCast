@@ -1,0 +1,162 @@
+/* Font imports */
+
+@import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans:600');
+
+/* Project base styles */
+
+/* Body presets */
+html, body {
+	font-family: 'Lora', serif;
+	font-size: 16px;
+	line-height: 1;
+	color: #4A4848;
+	max-width: 100%;
+	position: relative;
+}
+
+/* Box sizing dimens */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+/* Selections */
+img::selection, ::selection {
+	background: rgba(225, 27, 34, 0.2);
+}
+
+/* Link presets */
+a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+	text-decoration: none;
+	outline: none;
+	display: block;
+}
+
+/* Typography presets */
+h1, h2, h3, h4, h5, h6, p {
+	color: #4A4848;
+}
+
+h1, h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 600;
+}
+
+h3, h4, h5, h6, p {
+	font-family: 'Lora', serif;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: 2.5rem;
+}
+
+h2 {
+	font-size: 2rem;
+	line-height: 0;
+}
+
+h3 {
+	font-size: 1.8rem;
+}
+
+h4 {
+	font-size: 1.6rem;
+}
+
+h5 {
+	font-size: 1.4rem;
+}
+
+h6 {
+	font-size: 1.2rem;
+}
+
+p {
+	line-height: 1.6;
+}
+
+/* Page container */
+.container {
+	padding: 2rem;
+	margin: 0 auto;
+}
+
+/* Spacings */
+.header, .header > h1, #vid, #clip-div, #clip-description:nth-child(1) {
+	margin-bottom: 1rem;
+}
+
+/* Current video styles */
+#clip {
+	width: 100%;
+	background-color: black;
+}
+
+/* Clip list container styling */
+#clip-list {
+	height: 24rem;
+	overflow-y: scroll;
+}
+
+/* Clip list element styling */
+#clip-list > .clip-item {
+	padding: 1rem;
+	transition: background-color 350ms ease-in-out;
+}
+
+#clip-list > .clip-item:not(:last-child) {
+	border-bottom: 1px solid #E0E0E0;
+}
+
+#clip-list > .clip-item:hover {
+	background-color: #E0E0E0;
+}
+
+
+.clip-item-hover {
+	background-color: #E0E0E0;
+}
+
+/* Signify the currently selected clip */
+.active {
+	background-color: #1978FA;
+}
+.active p, .active h2 {
+	color: #fff;
+}
+
+/* Adapt content for smaller devices */
+@media screen and (min-width: 1137px) {
+	/* Restrict container size for specified requirements */
+	.container {
+		max-width: 1280px;
+		max-height: 720px;
+	}
+
+	/* Display the clip list and video player side by side */
+	.main {
+		display: flex;
+	}
+
+	/* Specify the width of the clip list */
+	#clip-list {
+		width: 30%;
+	}
+
+	/* Specify the width of the video player */
+	#video-section {
+		width: 70%;
+	}
+
+	/* Specify the height of the video player */
+	#clip {
+		height: 24rem;
+	}
+
+	/* Specify the height of the clip list items */
+	#clip-list > .clip-item {
+		height: 6rem;
+	}
+}

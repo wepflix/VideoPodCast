@@ -1,0 +1,17 @@
+{
+  "name": "videopodcast",
+  "version": "1.0.0",
+  "description": "Accedo Web Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "connect-flash": "^0.1.1",
+    "express": "^4.16.3",
+    "rss-parser": "^3.4.2"
+  }
+}
