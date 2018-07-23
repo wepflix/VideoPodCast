@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 var flash = require('connect-flash');
 var app = express();
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 3001));
 app.set('view engine', 'ejs');
 var bodyParser = require('body-parser');
 app.use(bodyParser.json());
@@ -29,7 +29,7 @@ app.get('/getFeed', function(request, response) {
      
     })();
 });
-app.all('/*', function(req, res, next) 
+/*app.all('/*', function(req, res, next) 
 {
   // CORS headers
   res.header("Access-Control-Allow-Origin", "*"); // restrict it to the required domain
@@ -41,7 +41,7 @@ app.all('/*', function(req, res, next)
   } else {
     next();
   }
-});
+});*/
 app.use(function(req, res, next) {
   var err = new Error('Page Not Found');
   err.status = 404;
